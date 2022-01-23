@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div{
+    text-align: center;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    border-radius: 28px;
+    border: 1px solid hsla(0,0%,51.4%,.16);
+}
+
+#country-name{
+    display: none;
+}
+
+#flag-image{
+    display: none;
+    border: 1px solid;
+}
+
+#laguage{
+    display: none;
+}
+
+#map-info{
+    display: none;
+}

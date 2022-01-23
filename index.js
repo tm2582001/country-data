@@ -1,5 +1,6 @@
 let fetchData;
 
+//  to get search data
 let changeData = (value)=>{
     let dataobtained = fetchData.filter((data)=>(data.name.common.toLowerCase().includes(value.toLowerCase())));
     document.getElementById("app").innerHTML= "";
@@ -8,6 +9,9 @@ let changeData = (value)=>{
 
 let displayData = (data) => {
     data.map((data) => {
+        document.getElementsByClassName("search-box")[0].style.display = "block";
+        
+        // rendering new data
         const countryName = document.createElement("h1");
         countryName.innerHTML = data.name.common;
         const image = document.createElement("img");
@@ -21,7 +25,7 @@ let displayData = (data) => {
         const div = document.createElement("div");
         div.appendChild(image);
         div.appendChild(countryName);
-        div.classList.add("hello");
+        div.classList.add("country");
 
         div.addEventListener("click", (abc)=>{
             // console.log(abc.target);
@@ -34,7 +38,7 @@ let displayData = (data) => {
     });
 }
 
-
+// requesting data
 fetch("https://restcountries.com/v3.1/all")
     .then((data) => (data.json()))
     .then((data) => (data.sort((a, b)=>{
