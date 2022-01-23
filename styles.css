@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#app{
+    width: 90vw;
+    margin: auto;
+    padding: 30px;
+    /* padding: 40px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#app img{
+    width: 300px;
+    height: auto;   
+}
